@@ -1,0 +1,71 @@
+<section id="header" class="jumbotron text-center">
+  <img src="https://driveio.jpsoft.cz/images/logo.png" class="nav-item" alt="">
+</section>
+
+
+<section style="padding-left: 2%; padding-top: 2%; padding-bottom: 2%; width: 100%">
+  <h2><i>Výsledky vyhledávání pro  <strong>Vše</strong> :</i></h2>
+</section>
+
+
+<section id="gallery" >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4" *ngFor="let car of cars">
+        <div class="card">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ car.img1 }}" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="{{car.img2}}" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="{{car.img3}}" class="d-block w-100">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center"><strong>{{ car.znacka }} {{ car.model }}</strong></h5>
+            <p class="card-text" style="text-align: center">{{ car.motor }} {{ car.druhMotoru }}</p>
+            <div class="row">
+              <div class="col">
+                <div style="margin-left: 40%">
+                  <img style="margin-left: 5%" src="https://img.icons8.com/ios/30/000000/car--v1.png" alt="">
+                  <h5>{{ car.rokVyroby}}</h5>
+                </div>
+              </div>
+              <div class="col">
+                <div style="margin-left: 40%">
+                  <img style="margin-left: 10%" src="https://img.icons8.com/ios/30/000000/speedometer.png" alt="">
+                  <h5 style="margin-left: -20%">{{ car.pocetKm }} km</h5>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                <div style="margin-left: 40%">
+                  <img style="margin-left: 8%" src="https://img.icons8.com/external-icongeek26-outline-icongeek26/30/000000/external-fuel-city-life-icongeek26-outline-icongeek26.png" alt="">
+                  <h5>{{ car.palivo }}</h5>
+                </div>
+              </div>
+              <div class="col">
+                <div style="margin-left: 40%">
+                  <img style="margin-left: 10%" src="https://img.icons8.com/ios/24/000000/gas-pump.png" alt="">
+                  <h5 style="margin-left: -20%">{{ car.spotrebaPrumer }}l/100 km </h5>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center" style="margin-top: 5%">
+              <a [routerLink]="['/car' , car.id]" class="btn btn-primary" style="background-color: #ff6500; border: none; width: 50%">Více...</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
