@@ -7,6 +7,7 @@ import {RegisterComponent} from "./register/register.component";
 import {CarsComponent} from "./cars/cars.component";
 import {CenikComponent} from "./cenik/cenik.component";
 import {KontaktComponent} from "./kontakt/kontakt.component";
+import {FouroufourComponent} from "./fouroufour/fouroufour.component";
 
 
 const routes: Routes = [
@@ -16,7 +17,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'cars', component: CarsComponent},
   { path: 'cenik', component: CenikComponent},
-  { path: 'kontakt', component: KontaktComponent}
+  { path: 'kontakt', component: KontaktComponent},
+  { path: '404', component: FouroufourComponent },
+  { path: '**', redirectTo: '404' }
 
 ];
 

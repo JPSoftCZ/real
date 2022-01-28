@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import {FormsModule} from "@angular/forms";
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
+import { FouroufourComponent } from './fouroufour/fouroufour.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     HomeComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    FouroufourComponent
   ],
     imports: [
         BrowserModule,
